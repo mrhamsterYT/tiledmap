@@ -28,8 +28,8 @@ pytmx_map = load_pygame("testy/minebatlemap0.1.tmx")
 class Block(pygame.sprite.Sprite):
     def __init__(self, color, width, height):
         super().__init__()
-        self.image = pygame.Surface([width, height])
-        self.image.fill(color)
+        self.image = pygame.image.load("o_o/zefir_stoit.png")
+        self.image = pygame.transform.scale(self.image,(120,140))
         self.rect = self.image.get_rect()
 
         # Скорость движения (2 пикселя за кадр)
